@@ -40,5 +40,11 @@ let manipulateStrings = () => {
     refreshInput();
 }
 
-// Event listener
+// Event listeners
 submitBtn.addEventListener("click", manipulateStrings);
+input.addEventListener("keypress", function(event){
+    if (event.which === 13) {
+        console.log("enter was clicked");
+        manipulateStrings();
+    };
+});
