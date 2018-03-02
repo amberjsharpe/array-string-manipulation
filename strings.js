@@ -40,5 +40,17 @@ let manipulateStrings = () => {
     refreshInput();
 }
 
-// Event listener
+
+// Event listeners
 submitBtn.addEventListener("click", manipulateStrings);
+input.addEventListener("keypress", function(event){
+    if (event.which === 13) {
+        manipulateStrings();
+    };
+});
+input.addEventListener("keypress", function(event){
+    var keyCode = event.keyCode;
+    if (keyCode > 47 && keyCode < 58) {
+        event.preventDefault();
+    }
+});
